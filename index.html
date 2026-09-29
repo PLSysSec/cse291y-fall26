@@ -1,0 +1,139 @@
+<meta charset="utf-8"><!-- -*- markdown -*- -->
+    **CSE 291-Y: Building Secure Systems with Rust**
+          [*Deian Stefan*](https://cseweb.ucsd.edu/~dstefan/)
+
+About
+==============================================================
+
+This course will explore how using a language like Rust with a powerful type 
+system and strong safety guarantees affects the design of secure systems. Do the 
+safety guarantees provided by Rust (e.g., memory safety) make it easier 
+to provide stronger guarantees using techniques like verification? What classes 
+of vulnerabilities can we completely eliminate by cleverly taking advantage of Rust's 
+type system? Where and how do Rust's safety guarantees break down when applied 
+to low-level systems code? To (start to) answer these questions, students will read
+and discuss recent research papers in the field and conduct a relevant 
+quarter-long research project in small groups. 
+
+Lectures:
+: Monday and Wednesday 5:00 - 6:20pm, Warren Hall 2207
+
+Staff:
+: **Instructor**: Deian Stefan
+: **TA**: Vivien Rindisbacher
+
+Office hours:
+: **Deian**: Mondays 4:00 - 5:00pm
+: **Vivien**: TBA
+
+Calendar and Readings
+==============================================================
+
+Mon Sep 28 2026: Introduction
+  - [*Slides*](https://docs.google.com/presentation/d/1jcqrNQ-VHMS-sNvfiaF1Ghej96LPdemsnvjC8-wG8r0/edit?usp=sharing)
+  - *Reading*: 
+    - [The Rise of Worse is Better](https://www.dreamsongs.com/RiseOfWorseIsBetter.html) by Richard Gabriel
+  - *Optional reading*:
+    - ["What next?"](https://graydon2.dreamwidth.org/253769.html) by Graydon Hoare
+
+Wed Sep 30 2026: The early days
+  - *Reading*: 
+    - [Engineering the Servo Web Browser Engine using Rust](./papers/servo.pdf) by Brian Anderson et al.
+    - [Region-based memory management in Cyclone](https://www.cs.tufts.edu/comp/150BUGS/cyclone-2002.pdf) by Dan Grossman et al.
+    - [The Rust I Wanted Had No Future](https://graydon2.dreamwidth.org/307291.html) by Graydon Hoare
+  - *Optional reading*:
+    - [Some of the Cyclone papers](https://cyclone.thelanguage.org/wiki/Papers/)
+    - [Rust book chapter 4: Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
+
+Mon Oct 5 2026: Safe and Unsafe Rust
+  - *Reading*:
+    - [Rustnomicon chapter 1: Safe & Unsafe](https://doc.rust-lang.org/nomicon/meet-safe-and-unsafe.html) 
+    - [How do programmers use unsafe rust?](./papers/unsafe_rust.pdf) by Vytautas Astrauskas et al.
+  - *Optional reading*:
+    - [Two Kinds of Invariants: Safety and Validity](https://www.ralfj.de/blog/2018/08/22/two-kinds-of-invariants.html)
+    - [Unsafe Rust and Miri](https://www.youtube.com/watch?v=svR0p6fSUYY&t=213s)
+
+Wed Oct 7 2026: Operating Systems
+  - *Reading*:
+    - [TickTock: Verified Isolation in a Production Embedded OS](https://ranjitjhala.github.io/static/sosp25-ticktock.pdf) by Vivien Rindisbacher et al.
+  - *Optional reading*:
+    - [Flux: Liquid Types for Rust](./papers/flux.pdf)
+
+Mon Oct 12 2026: Operating Systems
+  - *Reading*:
+    - [Theseus: an Experiment in Operating System Structure and State Management](https://www.usenix.org/conference/osdi20/presentation/boos) by Kevin Boos et al.
+
+Wed Oct 14 2026: Operating Systems
+  - *Reading*:
+    - [Beyond isolation: OS verification as a foundation for correct applications](https://dl.acm.org/doi/10.1145/3593856.3595899) by Matthias Brun, et al.
+
+Mon Oct 19 2026: Operating Systems
+  - *Reading*:
+    - [Atmosphere: Practical Verified Kernels with Rust and Verus](https://dl.acm.org/doi/10.1145/3731569.3764821) by Xiangdong Chen, et al.
+
+Wed Oct 21 2026: Tock, continued...
+  - *Reading*:
+    - [Tock: From Research To Securing 10 Million Computers](https://dl.acm.org/doi/pdf/10.1145/3731569.3764828) by Leon Schuermann, et al.
+
+Mon Oct 26 2026: Web Assembly
+ - *Reading*:
+    - [WaVe: a verifiably secure WebAssembly sandboxing runtime](https://cseweb.ucsd.edu/~dstefan/pubs/johnson:2023:wave.pdf) by Evan Johnson et al.
+
+Wed Oct 28 2026: Confidential VMs
+  - *Reading*:
+    - [VERISMO: A Verified Security Module for Confidential VMs](https://www.usenix.org/system/files/osdi24-zhou.pdf) by Ziqiao Zhou et al.
+
+Mon Nov 2 2026: The Cloud
+ - *Reading*:
+    - [Firecracker: Lightweight Virtualization for Serverless Applications](https://www.usenix.org/system/files/nsdi20-paper-agache.pdf) by Alexandru Agache et al.
+
+Wed Nov 4 2026: The Cloud (continued)
+ - *Reading*:
+    - [Unlocking True Elasticity for the Cloud-Native Era with Dandelion](https://dl.acm.org/doi/pdf/10.1145/3731569.3764803)
+
+Mon Nov 9 2026: Unikernels (i.e., more cloud)
+ - *Reading*:
+   - [Unikernels: library operating systems for the cloud](https://dl.acm.org/doi/abs/10.1145/2490301.2451167) by Anil Madhavapeddy, et al.
+
+Wed Nov 11 2026: FFI
+  - *Reading*:
+    - [Building Bridges: Safe Interactions with Foreign Languages through Omniglot](https://patpannuto.com/pubs/schuermann2025omniglot.pdf) by Leon Schuermann, et al.
+  - *Optional reading*:
+    - [Rustnomicon chapter 11: FFI](https://doc.rust-lang.org/nomicon/ffi.html)
+
+Mon Nov 16 2026: FFI (continued)
+  - *Reading*:
+    - [Building Bridges: Safe Interactions with Foreign Languages through Omniglot](https://patpannuto.com/pubs/schuermann2025omniglot.pdf) by Leon Schuermann, et al.
+    - [A Study of Undefined Behavior across Foreign Function Boundaries in Rust Libraries](https://dl.acm.org/doi/10.1109/ICSE55347.2025.00167) by Ian McCormack, et al.
+
+
+Wed Nov 18 2026: Embedded (guest: Evan Johnson)
+  - *Reading*:
+    - [Rust for Embedded Systems: Current State and Open Problems](https://dl.acm.org/doi/pdf/10.1145/3658644.3690275) by Ayushi Sharma et al.
+
+Mon Nov 23 2026: FFI (and Miri)
+  - *Reading*:
+    - [Tree Borrows](https://dl.acm.org/doi/pdf/10.1145/3735592) by Neven Villani et al.
+    - [A Study of Undefined Behavior across Foreign Function Boundaries in Rust Libraries](https://dl.acm.org/doi/10.1109/ICSE55347.2025.00167) by Ian McCormack, et al.
+
+<!-- Wed Nov 25 2026:  off -->
+
+<!-- Wed Nov 25 2026: Fearless Concurrency?
+ - *Reading*:
+    - [When is parallelism fearless and zero-cost with Rust?](./papers/parallelism.pdf) by Javad Abdi et al. -->
+
+Mon Nov 30 2026: Fearless Concurrency?
+  - *Reading*:
+    - [When is parallelism fearless and zero-cost with Rust?](./papers/parallelism.pdf) by Javad Abdi et al.
+
+Wed Dec 2 2026: Rust in Space
+  - *Reading*:
+    - [Bringing Rust to safety-critical systems in space](https://ieeexplore.ieee.org/document/10592287) by Lukas Seidel et al.
+    - [Programming Language Evaluation Criteria for Safety-Critical Software in the Air Domain](https://ieeexplore.ieee.org/document/9985123#page=5.09) by Rob Ashmore et al.
+
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script>
+<script>
+  window.alreadyProcessedMarkdeep || (document.body.style.visibility="visible");
+  markdeepOptions= {tocStyle: 'short', sortScheduleLists: false };
+</script>
+
